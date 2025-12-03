@@ -4,14 +4,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Starting Application Build"
-                bat 'python app.py'
+                bat 'py app.py'
             }
         }
 
         stage('Test') {
             steps {
                 echo "Starting Application Testing"
-                bat 'python test.py'
+                bat 'py test.py'
             }
         }
 
