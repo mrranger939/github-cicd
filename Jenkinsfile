@@ -1,18 +1,16 @@
 pipeline {
-    agent {
-        label 'slave-p'
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
-                echo "Building application...."
+                echo "Starting Application Build"
                 sh 'python3 app.py'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Testing application..."
+                echo "Starting Application Testing"
                 sh 'python3 test.py'
             }
         }
@@ -20,6 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying the Application"
+                echo "Application Deployed Successfully"
             }
         }
     }

@@ -1,1 +1,2 @@
-print('All Test cases passed')
+print('Application is being tested....')
+print("Testing successful")
