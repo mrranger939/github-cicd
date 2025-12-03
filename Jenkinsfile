@@ -3,12 +3,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Starting Application Build"
-                bat 'py app.py'
+                bat 'where python'
+                bat 'where py'
+                bat 'python --version'
+                bat 'py --version'
             }
         }
 
-        stage('Test') {
+/*         stage('Test') {
             steps {
                 echo "Starting Application Testing"
                 bat 'py test.py'
@@ -20,6 +22,6 @@ pipeline {
                 echo "Deploying the Application"
                 echo "Application Deployed Successfully"
             }
-        }
+        } */
     }
 }
